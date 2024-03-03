@@ -39,6 +39,11 @@ docker run -d --gpus=all -v ollama:/root/.ollama -v $(pwd)/files:/source --name=
 # starting a chat with model llava
 docker exec -it ollama ollama run llava
 # mixtral => 26GB , mistral 3GB, llama2 (meta), dolphin-mixtral (finetuning mixtral for coding)
+
+# remove a model
+docker exec -it ollama ollama rm llava
+# list models
+docker exec -it ollama ollama list
 ```
 
 Or with docker compose:
